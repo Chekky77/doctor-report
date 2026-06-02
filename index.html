@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Отчёты по визитам к врачам</title>
+<style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 40px; background: #f0f2f5; text-align: center; }
+    h1 { color: #1a2d47; margin-bottom: 5px; }
+    .subtitle { color: #888; margin-bottom: 35px; }
+    .cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .card { width: 320px; padding: 30px; background: white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .card .icon { font-size: 44px; margin-bottom: 12px; }
+    .card h2 { color: #2d4a75; margin: 0 0 8px 0; font-size: 18px; }
+    .card p { color: #666; font-size: 13px; line-height: 1.5; margin-bottom: 18px; }
+    .card a { display: inline-block; padding: 10px 22px; background: #4C72B0; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; }
+    .card a:hover { background: #3a5a8c; }
+    .card a.secondary { background: #f0f2f5; color: #4C72B0; }
+    .card a.secondary:hover { background: #e0e2e5; }
+</style>
+</head>
+<body>
+<h1>📊 Отчёты по визитам к врачам</h1>
+<p class="subtitle">Выберите нужный документ. Все отчёты интерактивные — с графиками, фильтрами и таблицами.</p>
+
+<div class="cards">
+    <div class="card">
+        <div class="icon">📊</div>
+        <h2>Сводный отчёт</h2>
+        <p>Полный интерактивный дашборд: общая аналитика (ЦА, регионы, топ/антитоп, выводы) и детальный отчёт по территориям и врачам.</p>
+        <a href="сводный_отчет.html" target="_blank">Открыть дашборд</a>
+    </div>
+    <div class="card">
+        <div class="icon">📋</div>
+        <h2>Аналитическая записка</h2>
+        <p>Документ с ключевыми выводами: характеристика выборки, проблемные зоны, топ-3 врача, рекомендации.</p>
+        <a href="аналитическая_записка.html" target="_blank">Читать записку</a>
+    </div>
+</div>
+</body>
+</html>
