@@ -14,16 +14,11 @@
     .header-line { width: 60px; height: 4px; background: #4C72B0; margin-bottom: 30px; border-radius: 2px; }
 
     .kpi-row { display: flex; gap: 15px; margin: 25px 0; flex-wrap: wrap; }
-    .kpi-item { flex: 1; min-width: 130px; background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 10px; text-align: center; border-top: 3px solid #4C72B0; }
-    .kpi-item.green { border-top-color: #55A868; }
-    .kpi-item.red { border-top-color: #C44E52; }
-    .kpi-item.purple { border-top-color: #8172B2; }
-    .kpi-value { font-size: 30px; font-weight: 700; }
-    .kpi-label { font-size: 12px; color: gray; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .kpi-item { flex: 1; min-width: 130px; background: white; padding: 20px; border-radius: 10px; text-align: center; border: 1px solid #e0e0e0; }
+    .kpi-item .kpi-value { font-size: 30px; font-weight: 700; }
+    .kpi-item .kpi-label { font-size: 12px; color: gray; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    .finding { background: #f8f9fa; border-left: 4px solid #4C72B0; padding: 18px 22px; margin: 18px 0; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.7; }
-    .finding.warning { border-left-color: #ffc107; background: #fffef5; }
-    .finding.success { border-left-color: #55A868; background: #f5fdf6; }
+    .finding { background: white; border: 1px solid #e0e0e0; padding: 18px 22px; margin: 18px 0; border-radius: 8px; font-size: 15px; line-height: 1.7; }
     .finding strong { color: #2d4a75; }
     .finding .num { font-weight: 700; font-size: 18px; }
 
@@ -42,18 +37,18 @@
 <body>
 <div class="document">
 
-<h1>📋 Аналитическая записка</h1>
+<h1>Аналитическая записка</h1>
 <p class="subtitle">К отчёту по визитам к врачам за квартал | Данные на основе анализа 11,697 врачей в 6 регионах</p>
 <div class="header-line"></div>
 
 <h2>1. Общая характеристика выборки</h2>
-<p>В базе зарегистрировано <strong>11,697 врачей</strong> из <strong>2,344 ЛПУ</strong>, расположенных в <strong>6 регионах</strong> и <strong>215 территориях</strong>. Работа ведётся по двум целевым аудиториям: <strong>кардиологи</strong> и <strong>гинекологи</strong>.</p>
+<p>В базе зарегистрировано <strong>11,697 врачей</strong> из <strong>2,344 ЛПУ</strong>, расположенных в <strong>6 регионах</strong> и <strong>224 территориях</strong>. Работа ведётся по двум целевым аудиториям: <strong>кардиологи</strong> (2,008 чел., 17.2%) и <strong>гинекологи</strong> (9,689 чел., 82.8%).</p>
 
 <div class="kpi-row">
     <div class="kpi-item"><div class="kpi-value" style="color:#4C72B0;">11,697</div><div class="kpi-label">Врачей в базе</div></div>
-    <div class="kpi-item green"><div class="kpi-value" style="color:#55A868;">4.0</div><div class="kpi-label">Среднее визитов</div></div>
-    <div class="kpi-item red"><div class="kpi-value" style="color:#C44E52;">50.0%</div><div class="kpi-label">Согласий на ПД</div></div>
-    <div class="kpi-item purple"><div class="kpi-value" style="color:#8172B2;">74.8%</div><div class="kpi-label">Участие в КС</div></div>
+    <div class="kpi-item"><div class="kpi-value" style="color:#55A868;">4.0</div><div class="kpi-label">Среднее визитов</div></div>
+    <div class="kpi-item"><div class="kpi-value" style="color:#C44E52;">50.0%</div><div class="kpi-label">Согласий на ПД</div></div>
+    <div class="kpi-item"><div class="kpi-value" style="color:#8172B2;">74.8%</div><div class="kpi-label">Участие в КС</div></div>
 </div>
 
 <h2>2. Ключевые выводы</h2>
@@ -67,24 +62,24 @@
 
 <h3>2.2. Согласия на обработку персональных данных</h3>
 <div class="finding">
-    Доля согласий составляет <strong>50.0%</strong> — ровно половина врачей не дала согласие. 
-    Разрыв между регионами достигает <strong>0 п.п.</strong>: 
-    лидер — <strong>Юг</strong> (50%), аутсайдер — <strong>Урал</strong> (50%). 
-    <span class="badge red">Требуются тренинги</span> для полевых в отстающих регионах.
+    Доля согласий составляет <strong>50.0%</strong>. Разрыв между регионами незначителен (в пределах 1 п.п.) — проблема не в регионе, а в конкретных территориях.
+    <strong>7 территорий</strong> имеют 0% согласий: Щербинка (Московская область), Санкт-Петербург (Санкт-Петербург), Яшкино (Кемеровская область), Уссурийск (Приморский край), Мелеуз г (Республика Башкортостан), Арамиль (Свердловская область), Цимлянский (Ростовская область). 
+    <span class="badge red">Требуются тренинги</span> для полевых в этих территориях — врачи принципиально не дают согласие, нужна другая тактика работы.
 </div>
 
 <h3>2.3. Участие в круглых столах</h3>
 <div class="finding">
-    <strong>74.8%</strong> врачей участвуют в круглых столах. 
-    Лидер — <strong>Волга</strong> (75%), аутсайдер — <strong>Москва</strong> (75%). 
-    Разрыв в <strong>0 п.п.</strong> указывает на необходимость пересмотра формата приглашений в отстающих регионах.
+    <strong>74.8%</strong> врачей участвуют в круглых столах. Разрыв между регионами незначителен (в пределах 1 п.п.) — проблема не в регионе, а в конкретных территориях.
+    <strong>3 территории</strong> имеют 0% участия в КС: Кириши (Ленинградская область), Ангарск (Иркутская область), Ленинск-Кузнецкий (Кемеровская область). 
+    <span class="badge yellow">Рекомендация:</span> в этих территориях врачи не вовлекаются в круглые столы. Стоит пересмотреть формат мероприятий, время проведения или способ оповещения.
 </div>
 
 <h3>2.4. Баланс по целевым аудиториям</h3>
 <div class="finding">
-    К <strong>Кардиологи</strong> ходят чаще (в среднем 4.0 визитов), 
-    к <strong>Гинекологи</strong> — реже (4.0 визитов). 
-    Разница в <strong>0.0</strong> визита может указывать на неравномерное распределение усилий полевой команды между ЦА.
+    К <strong>Кардиологи</strong> ходят в среднем <strong>4.0</strong> визитов, 
+    к <strong>Гинекологи</strong> — <strong>4.0</strong> визитов. 
+    Разница составляет <strong>0.0</strong> визита — распределение визитов между ЦА равномерное — полевая команда уделяет одинаковое внимание обеим аудиториям.. 
+    Всего в базе: <strong>2,008 кардиологов</strong> (17.2%) и <strong>9,689 гинекологов</strong> (82.8%).
 </div>
 
 <h3>2.5. Охват по регионам</h3>
@@ -94,38 +89,30 @@
     Разница в <strong>1442</strong> врачей требует проверки равномерности распределения полевых сил.
 </div>
 
-<h2>3. Топ-3 врача по визитам</h2>
+<h2>3. Проблемные зоны (тепловая карта)</h2>
 <table>
-    <tr><th>Место</th><th>Врач</th><th>ЦА</th><th>Территория</th><th>Визитов</th></tr>
-    <tr><td>🥇 1</td><td>Эльфира Марифовна Гусейнова</td><td>Кардиологи</td><td>Борский</td><td><strong>7</strong></td></tr>
-    <tr><td>🥈 2</td><td>Татьяна Васильевна Васильева</td><td>Гинекологи</td><td>Борский</td><td><strong>7</strong></td></tr>
-    <tr><td>🥉 3</td><td>Галина Владимировна Волынец</td><td>Гинекологи</td><td>Борский</td><td><strong>7</strong></td></tr>
-</table>
+    <tr><th>Регион</th><th>Средние визиты</th><th>Согласия ПД</th><th>Круглые столы</th></tr><tr><td><strong>Волга</strong></td><td>3.8</td><td style="color:#55A868">51%</td><td style="color:#55A868">75%</td></tr><tr><td><strong>Москва</strong></td><td>3.7</td><td style="color:#C44E52">50%</td><td style="color:#55A868">77%</td></tr><tr><td><strong>Северо-Запад</strong></td><td>3.8</td><td style="color:#C44E52">50%</td><td style="color:#55A868">74%</td></tr><tr><td><strong>Сибирь</strong></td><td>4.3</td><td style="color:#C44E52">50%</td><td style="color:#55A868">73%</td></tr><tr><td><strong>Урал</strong></td><td>4.3</td><td style="color:#C44E52">48%</td><td style="color:#55A868">77%</td></tr><tr><td><strong>Юг</strong></td><td>4.2</td><td style="color:#55A868">52%</td><td style="color:#55A868">74%</td></tr></table>
 
-<h2>4. Проблемные зоны</h2>
-<table>
-    <tr><th>Регион</th><th>Средние визиты</th><th>Согласия ПД</th><th>Круглые столы</th></tr><tr><td><strong>Волга</strong></td><td>3.8</td><td style="color:#55A868">51%</td><td style="color:#55A868">75%</td></tr><tr><td><strong>Москва</strong></td><td>3.8</td><td style="color:#C44E52">50%</td><td style="color:#55A868">75%</td></tr><tr><td><strong>Северо-Запад</strong></td><td>3.7</td><td style="color:#C44E52">50%</td><td style="color:#55A868">75%</td></tr><tr><td><strong>Сибирь</strong></td><td>4.3</td><td style="color:#C44E52">49%</td><td style="color:#55A868">75%</td></tr><tr><td><strong>Урал</strong></td><td>4.2</td><td style="color:#C44E52">50%</td><td style="color:#55A868">76%</td></tr><tr><td><strong>Юг</strong></td><td>4.2</td><td style="color:#55A868">52%</td><td style="color:#55A868">74%</td></tr></table>
-
-<h2>5. Рекомендации</h2>
-<div class="finding warning">
-    <strong>1. Усилить охват в отстающих регионах.</strong> Регион <strong>Волга</strong> имеет наименьшее количество врачей (1225). Проверить укомплектованность полевой команды.
+<h2>4. Рекомендации</h2>
+<div class="finding">
+    <strong>1. Усилить охват в отстающих регионах.</strong> Регион <strong>Волга</strong> имеет наименьшее количество врачей (1225). Проверить укомплектованность полевой команды и равномерность распределения сил.
 </div>
-<div class="finding warning">
-    <strong>2. Провести тренинги по получению согласий на ПД.</strong> В регионе <strong>Урал</strong> доля согласий составляет всего 49.97039668442866%. Разрыв с лидером — 0.12557260539860238 п.п. Требуются обучающие мероприятия для полевых сотрудников.
+<div class="finding">
+    <strong>2. Провести тренинги по получению согласий на ПД.</strong> 7 территорий имеют 0% согласий: Щербинка (Московская область), Санкт-Петербург (Санкт-Петербург), Яшкино (Кемеровская область), Уссурийск (Приморский край), Мелеуз г (Республика Башкортостан), Арамиль (Свердловская область), Цимлянский (Ростовская область). Требуются обучающие мероприятия для полевых сотрудников — врачи принципиально не дают согласие, нужна другая тактика работы.
 </div>
-<div class="finding warning">
-    <strong>3. Пересмотреть формат приглашений на круглые столы.</strong> В регионе <strong>Москва</strong> участвуют лишь 74.80314960629921% врачей. Возможно, стоит изменить время проведения, тематику или способ оповещения.
+<div class="finding">
+    <strong>3. Пересмотреть формат приглашений на круглые столы.</strong> 3 территорий имеют 0% участия: Кириши (Ленинградская область), Ангарск (Иркутская область), Ленинск-Кузнецкий (Кемеровская область). Стоит изменить время проведения, тематику или способ оповещения.
 </div>
-<div class="finding warning">
+<div class="finding">
     <strong>4. Взять в фокус врачей с низкой частотой визитов.</strong> 2911 врачей (24.9%) имеют всего 1 визит за квартал. Риск выпадения из активной работы. Назначить ответственных за повторные касания.
 </div>
-<div class="finding success">
+<div class="finding">
     <strong>5. Тиражировать успешные практики.</strong> 2910 врачей (24.9%) достигли максимальной частоты в 7 визитов. Проанализировать опыт полевых, работающих с этими врачами, и распространить на другие территории.
 </div>
 
 <div class="footer">
     <p>Аналитическая записка подготовлена автоматически на основе данных отчёта по визитам к врачам.</p>
-    <p>Источник данных: база визитов, 11,697 записей. Дата формирования: </p>
+    <p>Источник данных: база визитов, 11,697 записей. Территорий: 224. Регионов: 6.</p>
 </div>
 
 </div>
